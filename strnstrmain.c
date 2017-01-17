@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   strnstrmain.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:55:10 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/13 22:16:28 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/15 12:35:57 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/15 20:43:31 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 
-char	*ft_strcpy(char *dest, char *src)
+int		main()
 {
-	int i;
+	char *str1;
+	char *str;
+	char *to_find;
+	size_t len;
 
-	i = 0;
-	while (sr[i] !=  '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	str1 = "123abc1234";
+	str = "123abc1234";
+	to_find = "1234";
+	len = 8;
+	printf("builtin = %s\n", strnstr(str, to_find, len));
+	printf("my func = %s\n", ft_strnstr(str1, to_find, len));
+	return (0);
 }

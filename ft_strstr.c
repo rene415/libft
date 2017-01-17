@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:55:10 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/13 22:16:28 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/14 09:36:13 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/14 16:15:26 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strstr(const char *str, const char *to_find)
 {
-	int i;
+	char *i;
+	char *a;
 
 	i = 0;
-	while (sr[i] !=  '\0')
+	a = 0;
+	if (!*to_find)
+		return ((char *)str);
+	while (*str)
 	{
-		dest[i] = src[i];
-		i++;
+		if(*str == *to_find)
+		{
+			i = (char *)str + 1;
+			a = (char *)to_find + 1;
+			while(*i && *a && *i == *a)
+			{
+				i++;
+				a++;
+			}
+			if (!*a)
+				return((char *)str);
+		}
+		str++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

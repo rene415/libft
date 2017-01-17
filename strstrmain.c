@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   strstrmain.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:55:10 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/13 22:16:28 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/14 11:55:07 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/15 17:41:48 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <strings.h>
+#include <stdlib.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find);
+
+int		main()
 {
-	int i;
-
-	i = 0;
-	while (sr[i] !=  '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	char str[] = "Be the best that you can be.";
+	char to_find[] = "best";
+	printf("%s\n", strstr(str, to_find));
+	printf("%s", ft_strstr(str, to_find));
 }
