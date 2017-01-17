@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 12:35:57 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/15 20:43:31 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/17 15:46:25 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int		main()
 	char *to_find;
 	size_t len;
 
-	str1 = "123abc1234";
-	str = "123abc1234";
-	to_find = "1234";
+	str1 = "warreniscool";
+	str = "warreniscool";
+	to_find = "rren";
 	len = 8;
 	printf("builtin = %s\n", strnstr(str, to_find, len));
 	printf("my func = %s\n", ft_strnstr(str1, to_find, len));

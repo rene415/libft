@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 10:01:38 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/15 10:01:42 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/17 15:48:40 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			}
 			if (!*a)
 				return((char *)str);
+			to_find++;
 		}
 		str++;
 	}
-	return (0); //little occurs nowhere in big, NULL is returned
-}
+	return (0); //little occurs nowhere in big, NULL is return
