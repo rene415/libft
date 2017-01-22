@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   is_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/21 17:02:31 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/21 17:36:53 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/21 17:21:40 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/21 18:10:38 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
 
-int		ft_isalpha(int c)
+int		main()
 {
-	if ((c >= 65 && c >= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	ft_isalpha('a');
+	return (0);
 }
