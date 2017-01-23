@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   memcpy_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:55:10 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 17:51:42 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/22 17:48:24 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/22 21:20:37 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void	*ft_memcpy(void *dst, void *src, size_t n);
+
+int main ()
 {
-	int i;
+   char src[50] = "http://www.tutorialspoint.com";
+   const char src2[50] = "http://www.tutorialspoint.com";
+   char dest[50];
+   char dst[50];
 
-	i = 0;
-	while (src[i] !=  '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+   ft_memcpy(dst, src, strlen(src) + 1);
+   memcpy(dest, src2, strlen(src)+1);
+   printf("After memcpy dest = %s\n", dest);
+   printf("After ft_memcpy dst = %s\n", dst);
+   
+   return(0);
 }

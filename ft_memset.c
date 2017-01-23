@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpymain.c                                      :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/14 09:23:55 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 18:11:11 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/22 21:30:59 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/22 22:22:40 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strncpy(char *dest, char *str, unsigned int n);
-
-int main()
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char dest [] = "";
-	char src [] = "burritos";
-	printf("%s\n",ft_strncpy(dest, src, 3));
-	return(0);
+	size_t i;
+
+	i = 0;
+	while (i < len)
+	{
+		((char *)b)[i] = ((unsigned char) c);
+		i++;
+	}
+	return((void *)b);
 }

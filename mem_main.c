@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpymain.c                                      :+:      :+:    :+:   */
+/*   mem_main.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/14 09:23:55 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 18:11:11 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/22 16:13:01 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/22 17:21:47 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <string.h>
 
-char	*ft_strncpy(char *dest, char *str, unsigned int n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-int main()
+int	main()
 {
-	char dest [] = "";
-	char src [] = "burritos";
-	printf("%s\n",ft_strncpy(dest, src, 3));
-	return(0);
+	char s1[] = "hello";
+	char s2[] = "bye";
+	size_t n = 5;
+	printf("%d\n",ft_memcmp(s1, s2, n));
+	printf("%d\n", memcmp(s1, s2, n));
+	return (0);
 }

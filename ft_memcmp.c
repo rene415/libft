@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpymain.c                                      :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/14 09:23:55 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 18:11:11 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/22 12:38:01 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/22 21:57:00 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strncpy(char *dest, char *str, unsigned int n);
-
-int main()
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char dest [] = "";
-	char src [] = "burritos";
-	printf("%s\n",ft_strncpy(dest, src, 3));
-	return(0);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((unsigned char *) s1)[i] != ((unsigned char *) s2)[i])
+		{
+			return(((unsigned char *)s1)[i] - ((unsigned char *) s2)[i]);
+		}
+	      i++;
+	}
+	return (0);
 }

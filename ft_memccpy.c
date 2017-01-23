@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpymain.c                                      :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/14 09:23:55 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 18:11:11 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/22 21:59:35 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/22 23:28:32 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strncpy(char *dest, char *str, unsigned int n);
-
-int main()
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char dest [] = "";
-	char src [] = "burritos";
-	printf("%s\n",ft_strncpy(dest, src, 3));
-	return(0);
+	if (n == 0)
+		return (0);
+	while i
 }
