@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:50:06 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/28 16:00:57 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/28 11:25:07 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/28 11:32:42 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_tolower(int c)
 {
-	int i;
-
-	while (s1[i] == s2[i] && s1[i] != '\0')
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	if ((unsigned char)c >= 65 && (unsigned char)c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

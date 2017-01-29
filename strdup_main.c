@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   strdup_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:50:06 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/28 16:00:57 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/28 20:06:56 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/28 20:50:44 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int		ft_strcmp(char *s1, char *s2)
+char 	*ft_strdup(const char *str);
+
+int main()
 {
-	int i;
+    char *p1 = "Raja";
+	char *dup1 = "poo";
+    char *p2;
+	char *dup2;
+    p2 = strdup(p1);
+ 	dup2 = ft_strdup(dup1);
 
-	while (s1[i] == s2[i] && s1[i] != '\0')
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
+    printf("Duplicated string is : |%s|\n", p2);
+	printf("Duplicated string is : |%s|", dup2);
+	return 0;
 }

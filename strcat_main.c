@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   strcat_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:50:06 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/28 16:00:57 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/28 17:04:25 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/28 17:21:50 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-int		ft_strcmp(char *s1, char *s2)
+char	*ft_strcat(char *dst, const char *src);
+
+int main ()
 {
-	int i;
+   char src[50], dest[50];
+ 
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
 
-	while (s1[i] == s2[i] && s1[i] != '\0')
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
+   ft_strcat(dest, src);
+   //strcat(dest, src);
+
+   printf("Final destination string : |%s|", dest);
+  // printf("Final destination string : |%s|", dest);
+   
+   return(0);
 }
