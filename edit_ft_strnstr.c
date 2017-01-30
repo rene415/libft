@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   edit_ft_strnstr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 22:11:38 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/29 16:37:26 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/29 17:00:16 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/30 14:09:39 by rramirez         ###   ########.fr       */
 /*                                                                            */
+/*                                assisted By: David Castro                   */ 
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	unsigned int i;
+	char *i;
+	char *a;
+	const char *s;
 
-	i = 0;
-	while (i < n)
+	i = (char *)str;
+	a = (char *)to_find;
+	s = i + len;
+	while (*str && str <= s)
 	{
-		dest[i] = src[i];
-		if (src[i] == '\0')
+		i = (char *)str;
+		if (*str == *to_find)
 		{
-			i++;
-			while (i < n)
+			while (*i && *a && *i == *a && (i < s))
 			{
-				dest[i] = '\0';
 				i++;
+				a++;
 			}
 		}
-		if (src[i] != '\0')
-			i++;
+		if (!*a)
+			return ((char *)str);
+		a = 0;
+		a = (char *)to_find;
+		str++;
 	}
-	return (dest);
+	return (0);
 }

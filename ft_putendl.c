@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 22:11:38 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/29 16:37:26 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/29 15:52:37 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/29 15:55:56 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_putendl(char const *s)
 {
-	unsigned int i;
-
-	i = 0;
-	while (i < n)
-	{
-		dest[i] = src[i];
-		if (src[i] == '\0')
-		{
-			i++;
-			while (i < n)
-			{
-				dest[i] = '\0';
-				i++;
-			}
-		}
-		if (src[i] != '\0')
-			i++;
-	}
-	return (dest);
+	ft_putstr(s)
+	ft_putchar('\n');
 }

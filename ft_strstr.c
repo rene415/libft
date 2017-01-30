@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 09:36:13 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/14 16:15:26 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/29 16:41:31 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,17 @@ char	*ft_strstr(const char *str, const char *to_find)
 		return ((char *)str);
 	while (*str)
 	{
-		if(*str == *to_find)
+		if (*str == *to_find)
 		{
 			i = (char *)str + 1;
 			a = (char *)to_find + 1;
-			while(*i && *a && *i == *a)
+			while (*i && *a && *i == *a)
 			{
 				i++;
 				a++;
 			}
 			if (!*a)
-				return((char *)str);
+				return ((char *)str);
 		}
 		str++;
 	}

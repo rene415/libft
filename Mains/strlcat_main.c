@@ -22,9 +22,8 @@ int		main()
 	strcpy(src, "This is src");
 	strcpy(dst, "This is dst");
 
-//	strlcat(dst, src, 12);
+	strlcat(dst, src, 12);
 	ft_strlcat(dst, src, 12);
 
 	printf("final shit is : |_%s_|", dst);
 }
-

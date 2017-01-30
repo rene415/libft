@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/22 15:28:21 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 22:22:52 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/29 16:26:15 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 void	*ft_memcpy(void *dst, void *src, size_t n)
 {
 	size_t i;
-	
+
 	i = 0;
 	while (i < n)
 	{
-		((char *)dst)[i] = ((char *) src)[i];
-			i++;
+		((char *)dst)[i] = ((char *)src)[i];
+		i++;
 	}
 	return ((void *)dst);
 }

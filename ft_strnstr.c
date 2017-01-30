@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 10:01:38 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 23:04:09 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/29 21:53:52 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,27 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	char *i;
 	char *a;
+	const char *s;
 
-	i = 0;
-	a = 0;
-	if(!*to_find)
-		return((char *)str); //If little is an empty string, big is returned
-	while(*str && len --)
+	i = (char *)str;
+	a = (char *)to_find;
+	s = i + len;
+	while (*str && str <= s)
 	{
-		if (*str != *to_find)
-			a = 0;
-		else if(*str == *to_find)
+		i = (char *)str;
+		if (*str == *to_find)
 		{
-			i = (char *)str + 1;
-			a = (char *)to_find + 1;
-			while (*i && *a && *i == *a)
+			while (*i && *a && *i == *a && (i < s))
 			{
 				i++;
 				a++;
 			}
-			if (!*a)
-				return((char *)str);
-			to_find++;
 		}
+		if (!*a)
+			return ((char *)str);
+		a = 0;
+		a = (char *)to_find;
 		str++;
 	}
-	return (0); //little occurs nowhere in big, NULL is return
+	return (0);
+}

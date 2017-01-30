@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 21:55:10 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 17:51:42 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/29 16:33:44 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *dest, char *src)
 	int i;
 
 	i = 0;
-	while (src[i] !=  '\0')
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
