@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset_main.c                                      :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/22 21:43:28 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/22 22:20:28 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/30 20:49:27 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/30 21:33:23 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len);
-
-int main ()
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-   char str[50];
-   char b[50];
-
-   strcpy(str,"This is string.h library function");
-   strcpy(b,"This is string.h library function");
-   puts(str);
-   puts(b);
-
-   ft_memset(b, '$', 7);
-   memset(str,'$',7);
-   puts(str);
-   puts(b);
-   
-   return(0);
+	
 }

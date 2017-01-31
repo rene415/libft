@@ -6,37 +6,37 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 10:01:38 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/29 21:53:52 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/30 21:37:51 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *s, const char *to_find, size_t len)
 {
-	char *i;
-	char *a;
-	const char *s;
+	char		*i;
+	char		*a;
+	const char	*str;
 
-	i = (char *)str;
+	i = (char *)s;
 	a = (char *)to_find;
-	s = i + len;
-	while (*str && str <= s)
+	str = i + len;
+	while (*s && s <= str)
 	{
-		i = (char *)str;
-		if (*str == *to_find)
+		i = (char *)s;
+		if (*s == *to_find)
 		{
-			while (*i && *a && *i == *a && (i < s))
+			while (*i && *a && *i == *a && (i < str))
 			{
 				i++;
 				a++;
 			}
 		}
 		if (!*a)
-			return ((char *)str);
+			return ((char *)s);
 		a = 0;
 		a = (char *)to_find;
-		str++;
+		s++;
 	}
 	return (0);
 }

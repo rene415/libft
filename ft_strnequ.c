@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr_main.c                                      :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/20 22:19:48 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/21 16:17:06 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/30 20:44:43 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/30 22:23:20 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb);
-//void	ft_putnbr_fd(int nb, int fd);
-
-int		main()
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	ft_putnbr (215);
-//	ft_putnbr_fd(215, 1);
-	return(0);
+	while (*s1 == *s2 && n > 0)
+	{
+		s1++;
+		s2++;
+		n--;
+	}
+	if (s1 - s2 == 0)
+		return (1);
+	else
+		return (0);
 }

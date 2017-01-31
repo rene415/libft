@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/29 15:52:37 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/29 15:55:56 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/01/30 18:34:47 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s)
+	ft_putstr(s);
 	ft_putchar('\n');
 }

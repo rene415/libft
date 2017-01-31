@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putstr_main.c                                      :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/21 15:47:44 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/21 16:03:57 by rramirez         ###   ########.fr       */
+/*   Created: 2017/01/30 20:47:33 by rramirez          #+#    #+#             */
+/*   Updated: 2017/01/30 21:07:31 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//void	ft_putstr_fd(char const *str, int fd);
-void	ft_putstr(char const *str, int fd);
+#include "libft.h"
 
-int		main()
+char	**ft_strsplit(char const *s, char c)
 {
-	ft_putstr("goodbye", 1);
-//	ft_putstr_fd("hello", 1);
-	return(0);
+	
 }
