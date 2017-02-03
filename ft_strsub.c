@@ -14,5 +14,23 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	
+	char *mem;
+
+	if (!s)
+		return (0);
+	mem = (char *)malloc(sizeof(char) * (len + 1));
+	if (!mem)
+	{
+		free(mem);
+		return (0);
+	}
+	while (len > 0)
+	{
+		mem = s[start];
+		mem++;
+		start++;
+		len--;
+	}
+	mem = '\0';
+	return (mem);
 }

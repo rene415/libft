@@ -17,6 +17,7 @@ void	*ft_memalloc(size_t size)
 	size_t	i;
 	char	*mem;
 
+	i = 0;
 	mem = (char *)malloc(sizeof(char) * (size + 1));
 	if (size == 0)
 		return (0);
