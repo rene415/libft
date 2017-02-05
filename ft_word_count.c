@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_word_count.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/30 20:47:33 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/05 00:20:10 by rramirez         ###   ########.fr       */
+/*   Created: 2017/02/05 13:30:55 by rramirez          #+#    #+#             */
+/*   Updated: 2017/02/05 13:30:58 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+size_t		ft_word_count(const char *s, char c)
 {
-	size_t	word_counter;
-	size_t	current_word;
-	char	**mem;
+	size_t	counter;
+	int		i;
 
+	i = 0;
+	counter = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			counter++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+	}
+	return (counter);
 }
