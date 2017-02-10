@@ -18,14 +18,13 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	i = 0;
-	if (!mem)
+	if (!(mem = (char *)malloc(sizeof(size) * (size + 1))))
 		return (0);
-	mem = (char *)malloc(size) * (size + 1)
 	while (i < size)
 	{
 		mem[i]  = '\0';
 		i++;
 	}
-	mem = '\0';
+	*mem = '\0';
 	return (mem);
 }

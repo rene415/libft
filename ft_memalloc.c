@@ -26,6 +26,6 @@ void	*ft_memalloc(size_t size)
 		mem[i] = 0;
 		i++;
 	}
-	mem = '\0';
+	mem[i] = '\0';
 	return (mem);
 }

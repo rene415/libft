@@ -23,10 +23,10 @@ char	*ft_strmap(char const *s, char (*f)(char))
 		return (0);
 	while (*s)
 	{
-		mem = *f(s);
+		*mem = f(*s);
 		s++;
 		mem++;
 	}
-	mem = '\0';
+	*mem = '\0';
 	return (mem);
 }

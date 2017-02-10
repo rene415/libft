@@ -26,11 +26,11 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	}
 	while (len > 0)
 	{
-		mem = s[start];
+		*mem = s[start];
 		mem++;
 		start++;
 		len--;
 	}
-	mem = '\0';
+	*mem = '\0';
 	return (mem);
 }
