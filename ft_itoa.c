@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:52:57 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/04 23:56:14 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 13:52:50 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	int_len(int n)
 {
-	size_t		i;
+	size_t	i;
 
 	i = 1;
 	if (n < 0)
@@ -24,7 +24,7 @@ static size_t	int_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*mem;
 	size_t	len;
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		mem[0] = '-';
-		n = n  * -1;
+		n = n * -1;
 	}
 	while (n > 9)
 	{

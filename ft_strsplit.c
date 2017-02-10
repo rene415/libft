@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:47:33 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/05 00:20:10 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 13:45:18 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t	ft_letters(char const *s, char c)
 {
-		size_t	i;
+	size_t	i;
 
-		i = 0;
-		while (s[i] != '\0' && s[i] != c)
-			i++;
-		return (i);
+	i = 0;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
+	return (i);
 }
 
 char	**ft_strsplit(char const *s, char c)
@@ -27,7 +27,7 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	c_word;
 	char	**mem;
 	size_t	i;
-	
+
 	i = 0;
 	mem = (char **)malloc(sizeof(char *) * ft_word_count(s, c));
 	while (*s)
@@ -47,3 +47,4 @@ char	**ft_strsplit(char const *s, char c)
 	mem[c_word] = 0;
 	return (mem);
 }
+
