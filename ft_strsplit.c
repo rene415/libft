@@ -25,19 +25,21 @@ size_t	ft_letters(char const *s, char c)
 char	**ft_strsplit(char const *s, char c)
 {
 	size_t	words;
+	size_t	letters;
 	size_t	c_word;
 	char	**mem;
 	size_t	i;
 	
 	i = 0;
+	letters = ft_letters(s, c);
 	words = ft_word_count(s, c);
-	mem = (char **)malloc(sizeof(char *) * words);
+	mem = (char **)malloc(sizeof(char *) * words + 1);
 	while (*s)
 	{
 		if (*s != c)
 		{
 			c_word = 0;
-			mem[c_word] = (char *)malloc(sizeof(char) * ((ft_letters(s, c)) + 1));
+			mem[c_word] = (char *)malloc(sizeof(char) * (letters + 1));
 			while (ft_letters(s, c) > 0)
 				mem[c_word][i++] = *s++;
 			mem[c_word][i] = '\0';
