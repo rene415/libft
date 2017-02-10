@@ -67,4 +67,5 @@ char				*ft_strrchr(const char *str, int c);
 char				*strstr(const char *str, const char *to_find);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+size_t				ft_word_count(const char *s, char c);
 #endif

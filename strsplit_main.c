@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-size_t	ft_word_count(const char *s, char c);
+char	ft_strsplit(const char *s, char c);
 
 int		main()
 {
@@ -22,5 +22,6 @@ int		main()
 
 	s = "__test_test__";
 	c = '_';
-	printf("%zu\n", ft_word_count(s, c));
+	printf("%c\n", ft_strsplit(s, c));
 }
+
