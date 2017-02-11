@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 15:02:09 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/10 16:25:10 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 23:00:49 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void				ft_putstr_fd(char const *str, int fd);
 char				*ft_strcat(char *dst, const char *src);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *str);
-int					ft_strcmp(char *s1, char *s2);
+int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dest, char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
@@ -63,8 +63,8 @@ size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *str, char (*f)(char));
 char				*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 char				*ft_strncat(char *dst, const char *src, size_t n);
-int					ft_strncmp(char *s1, char *s2, unsigned int n);
-char				*ft_strncpy(char *dest, char *src, unsigned int n);
+int					ft_strncmp(const char *s1, const char *s2, unsigned int n);
+char				*ft_strncpy(char *dest, const char *src, size_t len);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *s, const char *to_find, size_t len);

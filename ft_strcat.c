@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 16:59:40 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/28 23:36:28 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 23:34:55 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 char	*ft_strcat(char *dst, const char *src)
 {
-	while (*dst)
-		dst++;
-	while (*src)
+	unsigned long i;
+	unsigned long j;
+
+	i = 0;
+	j = 0;
+	while (dst[i] != '\0')
+		i++;
+	while (src[j] != '\0')
 	{
-		*dst = *src;
-		src++;
-		dst++;
+		dst[i] = src[j];
+		j++;
+		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }
