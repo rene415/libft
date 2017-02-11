@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   strsub_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:46:56 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/10 21:03:20 by rramirez         ###   ########.fr       */
+/*   Created: 2017/02/10 21:29:26 by rramirez          #+#    #+#             */
+/*   Updated: 2017/02/10 21:57:46 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memalloc(size_t size)
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+
+int main()
 {
-	void	*mem;
+	char s[20] = "FUUCKCKTHIS";
+	unsigned int start;
+	size_t len;
 
-	if (!(mem = (void *)malloc((size))))
-		return (0);
-	if (mem)
-		ft_memset(mem, 0, size);
-	return (mem);
+	start = 2;
+	len = 6;
+	printf("%s\n",ft_strsub(s, start, len));
 }

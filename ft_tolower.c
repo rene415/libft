@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 11:25:07 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/28 11:32:42 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 20:29:15 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_tolower(int c)
 {
-	if ((unsigned char)c >= 65 && (unsigned char)c <= 90)
+	if (c >= 65 && c <= 90)
 		return (c + 32);
 	else
 		return (c);

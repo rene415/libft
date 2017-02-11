@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 10:48:18 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/28 11:24:52 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 20:28:52 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_toupper(int c)
 {
-	if ((unsigned char)c >= 97 && (unsigned char)c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return (c);
