@@ -6,13 +6,13 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:42:32 by rramirez          #+#    #+#             */
-/*   Updated: 2017/01/30 22:18:53 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 15:27:23 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(const char *s1, const char *s2)
 {
 	while (*s1 == *s2)
 	{

@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 15:02:09 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/04 16:52:19 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 16:25:10 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ void				ft_bzero(void *str, size_t n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
-int					ft_digit(int c);
-int					ft_print(int c);
+int					ft_isdigit(int c);
+int					ft_isprint(int c);
+char				*ft_itoa(int n);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *str, int c, size_t n);
@@ -53,18 +54,25 @@ int					ft_strcmp(char *s1, char *s2);
 char				*ft_strcpy(char *dest, char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
+int					ft_strequ(char const *s1, const char *s2);
 void				ft_striter(char *str, void(*f)(char *));
 void				ft_striteri(char *str, void(*f)(unsigned int, char *));
+char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *str, char (*f)(char));
 char				*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+char				*ft_strncat(char *dst, const char *src, size_t n);
 int					ft_strncmp(char *s1, char *s2, unsigned int n);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
+int					ft_strnequ(const char *s1, const char *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *s, const char *to_find, size_t len);
 char				*ft_strrchr(const char *str, int c);
-char				*strstr(const char *str, const char *to_find);
+char				**ft_strsplit(char const *s, char c);
+char				*ft_strstr(const char *str, const char *to_find);
+char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 size_t				ft_word_count(const char *s, char c);

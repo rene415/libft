@@ -6,13 +6,13 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:47:33 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/10 13:45:18 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/10 16:57:54 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_letters(char const *s, char c)
+static size_t	ft_letters(char const *s, char c)
 {
 	size_t	i;
 
