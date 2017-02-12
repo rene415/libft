@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:49:27 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/10 21:50:49 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/11 10:15:51 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *mem;
+	char	*mem;
 	size_t	i;
 
 	i = 0;
@@ -28,6 +28,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		i++;
 		start++;
 	}
-	mem[i] = '\0'; 
+	mem[i] = '\0';
 	return (mem);
 }

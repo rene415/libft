@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:52:57 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/10 15:22:33 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/11 10:16:26 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ char			*ft_itoa(int n)
 	len = int_len(n);
 	if (n >= 0)
 		len--;
-	mem = (char *)malloc(sizeof(char) * (len + 1));
+	if (!(mem = (char *)malloc(sizeof(char) * (len + 2))))
+		return (0);
 	mem[len + 1] = '\0';
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
