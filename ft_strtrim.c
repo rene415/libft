@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:51:26 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/11 19:25:27 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/11 21:32:12 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strtrim(char const *s)
 	h = 0;
 	i = 0;
 	len = 0;
+	if (!s)
+		return (0);
 	while (s[h] == ' ' || s[h] == '\n' || s[h] == '\t')
 		h++;
 	if (h == ft_strlen(s))

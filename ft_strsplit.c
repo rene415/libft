@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:47:33 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/10 16:57:54 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/11 22:23:08 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	i;
 
 	i = 0;
-	mem = (char **)malloc(sizeof(char *) * ft_word_count(s, c));
+	if (!s || !c)
+		return (0);
+	if (!(mem = (char **)malloc(sizeof(char *) * ft_word_count(s, c) + 1)))
+		return (0);
 	while (*s)
 	{
 		if (*s != c)
@@ -47,4 +50,3 @@ char	**ft_strsplit(char const *s, char c)
 	mem[c_word] = 0;
 	return (mem);
 }
-
