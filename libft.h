@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 15:02:09 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/18 00:31:08 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/18 10:22:21 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int					ft_toupper(int c);
 size_t				ft_letters(char const *s, char c);
 size_t				ft_int_len(int n);
 size_t				ft_word_count(const char *s, char c);
-int				ft_spaces(int str);
+int					ft_spaces(int str);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
