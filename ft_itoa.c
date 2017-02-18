@@ -12,24 +12,12 @@
 
 #include "libft.h"
 
-static size_t	int_len(int n)
-{
-	size_t	i;
-
-	i = 1;
-	if (n < 0)
-		n = -n;
-	while (n /= 10)
-		i++;
-	return (i);
-}
-
 char			*ft_itoa(int n)
 {
 	char	*mem;
 	size_t	len;
 
-	len = int_len(n);
+	len = ft_int_len(n);
 	if (n >= 0)
 		len--;
 	if (!(mem = (char *)malloc(sizeof(char) * (len + 2))))
