@@ -28,7 +28,7 @@ char	**ft_strsplit(char const *s, char c)
 	char	**mem;
 	size_t	i;
 
-	i = 0;
+	c_word = 0;
 	if (!s || !c)
 		return (0);
 	if (!(mem = (char **)malloc(sizeof(char *) * ft_word_count(s, c) + 1)))
@@ -37,7 +37,7 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		if (*s != c)
 		{
-			c_word = 0;
+			i = 0;
 			mem[c_word] = (char *)malloc(sizeof(char) * (ft_letters(s, c) + 1));
 			while (ft_letters(s, c) > 0)
 				mem[c_word][i++] = *s++;
