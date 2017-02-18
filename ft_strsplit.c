@@ -6,7 +6,7 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/30 20:47:33 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/11 22:23:08 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/17 22:15:35 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	ft_letters(char const *s, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	size_t	c_word;
 	char	**mem;
@@ -43,7 +43,7 @@ char	**ft_strsplit(char const *s, char c)
 				mem[c_word][i++] = *s++;
 			mem[c_word][i] = '\0';
 			c_word++;
-		}	
+		}
 		else
 			s++;
 	}

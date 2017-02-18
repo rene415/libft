@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_lsiter.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/13 21:46:56 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/17 22:55:37 by rramirez         ###   ########.fr       */
+/*   Created: 2017/02/17 23:51:15 by rramirez          #+#    #+#             */
+/*   Updated: 2017/02/18 00:36:02 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	void	*mem;
-
-	if (!(mem = (void *)malloc((size))))
-		return (0);
-	if (mem)
-		ft_memset(mem, 0, size);
-	return (mem);
+	if (!lst || !f)
+		return ;
+	while (*lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }
