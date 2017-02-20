@@ -6,15 +6,17 @@
 /*   By: rramirez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 15:02:09 by rramirez          #+#    #+#             */
-/*   Updated: 2017/02/18 10:22:21 by rramirez         ###   ########.fr       */
+/*   Updated: 2017/02/19 19:12:06 by rramirez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <ctype.h>
 
 typedef struct		s_list
 {
@@ -54,10 +56,10 @@ int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dest, char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
-int					ft_strequ(char const *s1, const char *s2);
+int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *str, void(*f)(char *));
 void				ft_striteri(char *str, void(*f)(unsigned int, char *));
-char				*ft_strjoin(const char *s1, const char *s2);
+char				*ft_strjoin(char const *s1, char const *s2);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *str, char (*f)(char));
@@ -65,7 +67,7 @@ char				*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 char				*ft_strncat(char *dst, const char *src, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
-int					ft_strnequ(const char *s1, const char *s2, size_t n);
+int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(const char *s, const char *to_find, size_t len);
 char				*ft_strrchr(const char *str, int c);
